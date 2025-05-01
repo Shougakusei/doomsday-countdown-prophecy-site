@@ -2,6 +2,7 @@
 import React, { useState, FormEvent } from 'react';
 import { useToast } from "@/hooks/use-toast";
 import Modal from './Modal';
+import { sendRegistrationEmail } from '@/services/emailService';
 
 interface FormData {
   name: string;
@@ -38,18 +39,25 @@ const RegistrationForm: React.FC = () => {
     setIsLoading(true);
     
     try {
-      // Mock API call
-      await new Promise(resolve => setTimeout(resolve, 1000));
+      // Send registration email
+      await sendRegistrationEmail(formData);
       
       // Show success toast
       toast({
         title: "Регистрация получена",
-        description: "Ваши данные в безопасности... пока что.",
-        variant: "destructive"
+        description: "Ваши данные отправлены успешно!",
+        variant: "default"
       });
       
       // Show modal
       setIsModalOpen(true);
+      
+      // Reset form
+      setFormData({
+        name: '',
+        email: '',
+        riskAssessment: ''
+      });
     } catch (error) {
       toast({
         title: "Ошибка регистрации",
