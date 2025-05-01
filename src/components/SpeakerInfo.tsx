@@ -1,10 +1,11 @@
 
 import React from 'react';
 import { AlertTriangle } from 'lucide-react';
+import QuoteBlock from './QuoteBlock';
 
 const SpeakerInfo: React.FC = () => {
   return (
-    <section className="my-16 w-full max-w-3xl mx-auto px-4 md:px-0">
+    <section id="speaker" className="my-16 w-full max-w-3xl mx-auto px-4 md:px-0 pt-16">
       <div className="relative pixel-border bg-doomsday-gray/30 p-6 md:p-8 rounded-lg">
         <h2 className="text-2xl md:text-3xl font-bold mb-6 text-center flex items-center justify-center gap-2">
           <AlertTriangle className="h-6 w-6 text-doomsday-red animate-flashing-warning" />
@@ -15,7 +16,7 @@ const SpeakerInfo: React.FC = () => {
           <div className="relative w-40 h-40 md:w-56 md:h-56 overflow-hidden rounded-lg border-2 border-doomsday-red/50">
             <div className="absolute inset-0 bg-gradient-to-b from-doomsday-dark/0 to-doomsday-red/30 z-10"></div>
             <img
-              src="https://images.unsplash.com/photo-1509475826633-fed577a2c71b?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80"
+              src="/yudkowsky.jpg"
               alt="Элиезер Юдковский"
               className="w-full h-full object-cover grayscale contrast-125 brightness-90"
             />
@@ -30,16 +31,8 @@ const SpeakerInfo: React.FC = () => {
               Research Institute (MIRI).
             </p>
             <div className="flex flex-col gap-2">
-              <div className="p-2 bg-doomsday-dark/50 border-l-4 border-doomsday-red rounded">
-                <p className="text-sm italic text-doomsday-light/90">
-                  "Создание сверхразума при текущих условиях = смерть всего живого. Не "может быть", а "очевидно"."
-                </p>
-              </div>
-              <div className="p-2 bg-doomsday-dark/50 border-l-4 border-doomsday-red rounded">
-                <p className="text-sm italic text-doomsday-light/90">
-                  "ИИ не любит вас. Вы — атомы, которые он использует для других целей."
-                </p>
-              </div>
+              <QuoteBlock quote="Создание сверхразума при текущих условиях = смерть всего живого. Не 'может быть', а 'очевидно'." />
+              <QuoteBlock quote="ИИ не любит вас. Вы — атомы, которые он использует для других целей." />
             </div>
           </div>
         </div>
