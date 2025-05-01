@@ -1,3 +1,4 @@
+
 import type { Config } from "tailwindcss";
 
 export default {
@@ -61,6 +62,12 @@ export default {
 					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
+				},
+				doomsday: {
+					dark: '#0a0a2a',
+					red: '#ff2a2a',
+					light: '#f5f5f5',
+					gray: '#1e1e3a',
 				}
 			},
 			borderRadius: {
@@ -70,25 +77,52 @@ export default {
 			},
 			keyframes: {
 				'accordion-down': {
-					from: {
-						height: '0'
-					},
-					to: {
-						height: 'var(--radix-accordion-content-height)'
-					}
+					from: { height: '0' },
+					to: { height: 'var(--radix-accordion-content-height)' },
 				},
 				'accordion-up': {
-					from: {
-						height: 'var(--radix-accordion-content-height)'
+					from: { height: 'var(--radix-accordion-content-height)' },
+					to: { height: '0' },
+				},
+				'burning-text': {
+					'0%, 100%': {
+						textShadow: '0 0 5px #ff2a2a, 0 0 10px #ff2a2a, 0 0 20px #ff2a2a'
 					},
-					to: {
-						height: '0'
+					'50%': {
+						textShadow: '0 0 10px #ff7a7a, 0 0 20px #ff7a7a, 0 0 30px #ff7a7a'
 					}
+				},
+				'flashing-warning': {
+					'0%, 100%': { opacity: '1' },
+					'50%': { opacity: '0.8' }
+				},
+				'red-pulse': {
+					'0%, 100%': { boxShadow: '0 0 5px #ff2a2a' },
+					'50%': { boxShadow: '0 0 20px #ff2a2a, 0 0 30px #ff2a2a' }
+				},
+				'falling-data': {
+					'0%': { transform: 'translateY(-10px)' },
+					'100%': { transform: 'translateY(110vh)' }
+				},
+				'background-fade': {
+					'0%': { backgroundColor: 'rgba(10, 10, 42, 0.7)' },
+					'100%': { backgroundColor: 'rgba(0, 0, 0, 0.95)' }
+				},
+				'tooth-fall': {
+					'0%': { transform: 'translateY(-100px)', opacity: '0' },
+					'50%': { opacity: '1' },
+					'100%': { transform: 'translateY(500px)', opacity: '0' }
 				}
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
-				'accordion-up': 'accordion-up 0.2s ease-out'
+				'accordion-up': 'accordion-up 0.2s ease-out',
+				'burning-text': 'burning-text 1.5s infinite',
+				'flashing-warning': 'flashing-warning 2s infinite',
+				'red-pulse': 'red-pulse 2s infinite',
+				'falling-data': 'falling-data 15s linear infinite',
+				'background-fade': 'background-fade 5s ease-out forwards',
+				'tooth-fall': 'tooth-fall 3s ease-in-out forwards'
 			}
 		}
 	},
