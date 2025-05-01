@@ -16,7 +16,7 @@ const SpeakerInfo: React.FC = () => {
           <div className="relative w-40 h-40 md:w-56 md:h-56 overflow-hidden rounded-lg border-2 border-doomsday-red/50">
             <div className="absolute inset-0 bg-gradient-to-b from-doomsday-dark/0 to-doomsday-red/30 z-10"></div>
             <img
-              src="/yudkowsky.jpg"
+              src="https://images.unsplash.com/photo-1485827404703-89b55fcc595e?auto=format&fit=crop&w=600&q=80"
               alt="Элиезер Юдковский"
               className="w-full h-full object-cover grayscale contrast-125 brightness-90"
             />
