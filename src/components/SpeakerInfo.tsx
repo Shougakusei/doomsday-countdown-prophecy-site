@@ -2,6 +2,7 @@
 import React from 'react';
 import { AlertTriangle } from 'lucide-react';
 import QuoteBlock from './QuoteBlock';
+import { Avatar, AvatarImage, AvatarFallback } from './ui/avatar';
 
 const SpeakerInfo: React.FC = () => {
   return (
@@ -16,7 +17,7 @@ const SpeakerInfo: React.FC = () => {
           <div className="relative w-40 h-40 md:w-56 md:h-56 overflow-hidden rounded-lg border-2 border-doomsday-red/50">
             <div className="absolute inset-0 bg-gradient-to-b from-doomsday-dark/0 to-doomsday-red/30 z-10"></div>
             <img
-              src="https://images.unsplash.com/photo-1485827404703-89b55fcc595e?auto=format&fit=crop&w=600&q=80"
+              src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8f/Eliezer_Yudkowsky.jpg/1200px-Eliezer_Yudkowsky.jpg"
               alt="Элиезер Юдковский"
               className="w-full h-full object-cover grayscale contrast-125 brightness-90"
             />
